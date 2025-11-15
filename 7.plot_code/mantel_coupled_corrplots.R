@@ -4,7 +4,7 @@
 # Coupled correlation plots:
 # - Read module–module correlation (ME_cor) + p-values (ME_pvalue)
 # - Read module×metabolite R and P matrices (wide), convert to long
-# - Clip negative R to 0; keep metabolites with any R>=0.7
+# - Clip negative R to 0; keep metabolites with any R>=0.75
 # - Bin R (rd) and P (pd) for edge aesthetics
 # - Draw two quadrant-style correlation plots (lower/upper triangles)
 # - Combine and export
