@@ -4,12 +4,12 @@ cut -f 6 geneid_to_mRNAid.txt >allmRNAID.txt
 perl ../scripts/get_mRNA_position.pl allmRNAID.txt ../genome.final.gff3 AT.gff
 perl ../scripts/get_fa_by_id.pl allmRNAID.txt ../protein.fa pep.fa
 makeblastdb -in pep.fa  -dbtype prot -title pep.fa
-blastall -i pep.fa -d pep.fa -e 1e-10  -p blastp  -b 5 -v 5 -m 8 -o hap1.blast
-MCScanX hap1
+blastall -i pep.fa -d pep.fa -e 1e-10  -p blastp  -b 5 -v 5 -m 8 -o IP.blast
+MCScanX IP
 ######################plot##############################################################
 mkdir circos
 cd circos
-perl ../scripts/mcscanX2sync.pl -gff ../MCScanX/AT.gff   -colline ../MCScanX/AT.collinearity    -name genome
+perl ../scripts/mcscanX2sync.pl -gff ../MCScanX/IP.gff   -colline ../MCScanX/IP.collinearity    -name genome
 samtools faidx  ../genome.fa
 awk '{print $1"\t"$2}' ../genome.fa.fai >genome.len
 grep -i "^chr" genome.len|sort -k1,1| awk '{print "chr\t-\t"$1"\t"$1"\t0\t"$2"\tchr"NR}'  > karyotype.txt
