@@ -12,16 +12,18 @@ The workflows cover **genome assembly, genome annotation, haplotype-resolved com
 
 ## Repository Structure
 
-The repository is organized into seven major modules corresponding to different analyses in the study:
+The repository contains seven major modules corresponding to the main analyses performed in this study:
 
+```text
 Indigofera-pseudotinctoria-T2T-genome/
-├── 1.Genome_assembly/
-├── 2.Genome_annotation/
-├── 3.Haplotype-resolved_genome_comparison/
-├── 4.ASE_analysis/
-├── 5.Phylogenomics_and_WGD/
-├── 6.transcriptomic–metabolomic_analysis/
-└── 7.plot_code/
+├── 1.Genome_assembly/                      # T2T genome assembly pipeline
+├── 2.Genome_annotation/                    # Structural and functional annotation
+├── 3.Haplotype-resolved_genome_comparison/ # Comparative genomic analyses
+├── 4.ASE_analysis/                         # Allele-specific expression analyses
+├── 5.Phylogenomics_and_WGD/                # Phylogenomics and whole-genome duplication analyses
+├── 6.Transcriptomic_metabolomic_analysis/  # Integrated transcriptome–metabolome analyses
+└── 7.Plot_code/                            # Scripts for figure generation
+```
 
 
 ### Module Description
